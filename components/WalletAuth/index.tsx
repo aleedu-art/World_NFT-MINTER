@@ -31,7 +31,7 @@ export const WalletAuth = () => {
         const res = await fetch(`/api/nonce`)
         const { nonce } = await res.json()
 
-        const { commandPayload: generateMessageResult, finalPayload } = await MiniKit.commandsAsync.walletAuth(walletAuthInput(nonce))
+         const { commandPayload: generateMessageResult, finalPayload } = await MiniKit.commandsAsync.walletAuth(walletAuthInput(nonce))
 
         if (finalPayload.status === 'error') {
             return

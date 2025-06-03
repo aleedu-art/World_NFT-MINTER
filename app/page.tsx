@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { MiniKit } from "@worldcoin/minikit-js";
 import { VerifyBlock } from "@/components/Verify";
 import { PayBlock } from "@/components/Pay";
-import { WalletAuth } from "@/components/WalletAuth";
+//import { WalletAuth } from "@/components/WalletAuth";
 import { Login } from "@/components/Login";
 
 export default function Home() {
