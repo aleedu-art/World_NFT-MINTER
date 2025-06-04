@@ -90,33 +90,56 @@ export const PayBlock = () => {
       </p>
 
       <div className="w-full space-y-4">
-        <Input
-          label="Recipient Address"
-          value={recipientAddress}
-          onChange={(e) => setRecipientAddress(e.target.value)}
-          placeholder="0x..."
-        />
+        
+ 
+
+<label className="block text-sm font-medium text-gray-700 mb-1">
+  Recipient Address
+  <Input
+    value={recipientAddress}
+    onChange={(e) => setRecipientAddress(e.target.value)}
+    placeholder="0x..."
+  />
+</label>        
 
         <div className="flex gap-4">
-          <Select
-            label="Token"
-            value={selectedToken}
-            onChange={(value) => setSelectedToken(value as Tokens)}
-            options={[
-              { label: "WLD", value: Tokens.WLD },
-              { label: "USDC", value: Tokens.USDCE }
-            ]}
-            className="flex-1"
-          />
+          {/* Você pode fazer o mesmo para o Select e o Input de Amount */}
+          <div className="flex-1">
+            <label htmlFor="tokenSelect" className="block text-sm font-medium text-gray-700 mb-1">
+              Token
+            </label>
+            <Select
+              // A prop label no Select desta biblioteca parece existir, mantenha se funcionar
+              // Se der erro no Select também, remova a label e use um <label> HTML como acima
+             // id="tokenSelect"
+              label="Token" // Verifique se esta prop é válida para o Select da biblioteca
+              value={selectedToken}
+              onChange={(value) => setSelectedToken(value as Tokens)}
+              options={[
+                { label: "WLD", value: Tokens.WLD },
+                { label: "USDC", value: Tokens.USDCE }
+              ]}
+              className="w-full" // Ajuste className se necessário
+            />
+          </div>
 
-          <Input
-            label="Amount"
-            type="number"
-            value={amount.toString()}
-            onChange={(e) => setAmount(parseFloat(e.target.value))}
-            placeholder="0.5"
-            className="flex-1"
-          />
+
+        <div className="flex-1">
+            <label htmlFor="amountInput" className="block text-sm font-medium text-gray-700 mb-1">
+              Amount
+            </label>
+            <Input
+              // Remova a prop label daqui
+              id="amountInput" // Adicione um ID
+              type="number"
+              value={amount.toString()}
+              onChange={(e) => setAmount(parseFloat(e.target.value))}
+              placeholder="0.5"
+              //className="w-full" // Ajuste className se necessário
+            />
+          </div>
+
+          
         </div>
       </div>
 
