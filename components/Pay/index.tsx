@@ -112,14 +112,14 @@ export const PayBlock = () => {
               // A prop label no Select desta biblioteca parece existir, mantenha se funcionar
               // Se der erro no Select também, remova a label e use um <label> HTML como acima
              // id="tokenSelect"
-              label="Token" // Verifique se esta prop é válida para o Select da biblioteca
+             // label="Token" // Verifique se esta prop é válida para o Select da biblioteca
               value={selectedToken}
               onChange={(value) => setSelectedToken(value as Tokens)}
               options={[
                 { label: "WLD", value: Tokens.WLD },
                 { label: "USDC", value: Tokens.USDCE }
               ]}
-              className="w-full" // Ajuste className se necessário
+             // className="w-full" // Ajuste className se necessário
             />
           </div>
 
