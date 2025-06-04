@@ -58,24 +58,24 @@ export default function Home() {
           <Login />
         </section>
 
-         
+         {shouldShowPaymentSection && (  
           <section className="bg-white rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
             <h2 className="text-xl font-semibold mb-4 text-gray-800">Wallet Auth</h2>
             <PayBlock />
           </section>
-     
+         )}
 
         <section className="bg-white rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
           <h2 className="text-xl font-semibold mb-4 text-gray-800">Incognito Action</h2>
           <VerifyBlock />
         </section>
 
-         
-          <section className="bg-white rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Payment</h2>
-            <PayBlock />
-          </section>
-         
+          {shouldShowPaymentSection && (  
+            <section className="bg-white rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">Payment</h2>
+              <PayBlock />
+            </section>
+          )}
                 
       </div>
     </main>
