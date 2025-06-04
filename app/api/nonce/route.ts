@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-export function GET(_req: NextRequest) {
+export function GET(req: NextRequest) {
     // Expects only alphanumeric characters
     const nonce = crypto.randomUUID().replace(/-/g, "");
 
